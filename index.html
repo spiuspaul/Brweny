@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thoughtworks: A leading technology consultancy | Thoughtworks</title>
+    <!-- <link rel="icon" type="image/x-icon" href="images/Thoughtworks.png"> -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"> 
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        @media only screen and (max-width: 768px) {
+            .nav-items {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #fff;
+                z-index: 1;
+            }
+
+            .nav-items.active {
+                display: flex;
+            }
+
+            .nav-item {
+                text-align: center;
+                margin: 8px 0;
+            }
+
+            .nav-items, .nav-item {
+                width: 100%;
+            }
+
+            .search-bar {
+                display: none;
+            }
+
+            .flag {
+                margin-left: 0;
+            }
+        }
+        nav {
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 10px;
+            color: rgb(80, 78, 78);
+        }
+        
+        .logo {
+            flex: 1;
+            margin-right: 20px;
+            width: 50px;
+        }
+        
+        .logo img {
+            width: 120px; 
+            height: auto;
+        }
+        
+        .nav-items {
+            flex: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .nav-item {
+            margin: 0 10px; 
+            text-decoration: none;
+            color: rgb(80, 78, 78);
+        }
+        
+        .search-bar {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        
+        .flag {
+            margin-left: 20px;
+            cursor: pointer;
+        }
+        
+        .flag img {
+            width: 30px; 
+            height: auto;
+            margin-right: 5px;
+        }
+        
+        .flag span {
+            margin-right: 5px;
+            color: black;
+        }
+        
+        .carousel {
+            position: relative;
+            height: 300px; 
+            background-image: url('images/hp_banner_thoughtworks_data_diagnostic.jpg'); 
+            background-size: cover;
+            background-position: center;
+            margin-top: -1px; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            color: white;
+            padding: 20px;
+        }
+        
+        .carousel-content {
+            max-width: 400px; 
+            margin-bottom: 40px; 
+            margin-left: 100px;
+        }
+        
+        .carousel-content h1 {
+            font-weight: lighter;
+            font-size: 24px;
+        }
+        
+        .carousel-content p {
+            font-weight: bold;
+            font-size: 35px;
+        }
+        
+        .get-started-button {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        
+        .dot-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: -20px;
+            margin-left: 700px;
+        }
+        
+        .dot {
+            width: 10px;
+            height: 10px;
+            background-color: #ccc;
+            border-radius: 50%;
+            margin: 10px 5px;
+        }
+        
+        .dot.middle {
+            width: 15px;
+            height: 15px;
+            background-color: #fff; 
+        }
+        
+        .additional-content {
+            justify-content: center;
+            text-align: center;
+            margin-top: 40px;
+            color: #555; 
+            font-size: 25px;
+            line-height: 1.5;
+        }
+
+        
+        
+        .custom-rectangle {
+            width: 1200px;
+            max-width: 10000px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: 2px solid #ddd;
+            border-radius: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 50px;
+        }
+        
+        .rectangle-image img {
+            width: 300px; 
+            height: 350px;
+        }
+        
+        .rectangle-text {
+            flex: 1;
+            margin: 0 90px;
+        }
+        
+        .rectangle-text p {
+            font-size: 28px;
+            line-height: 1;
+            color: #555;
+        }
+        
+        .rectangle-text p:first-child {
+            font-weight: bold;
+            color: #000;
+        }
+        
+        .rectangle-button {
+            background-color: rgb(122, 70, 70);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 1px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        
+        
+        .full-width-section {
+            margin-top: 50px;
+            background-color: #001f3f; 
+            color: white;
+            text-align: center;
+            padding: 50px 20px; 
+            height: 70px; 
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .section-text {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            margin-left: 90px;
+        }
+        
+        .get-in-touch-button {
+            background-color: rgb(168, 8, 8);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 1px;
+            margin-right: 90px;
+        }
+
+        @media only screen and (min-width: 769px) {
+            .full-width-section {
+                padding: 50px 20px;
+            }
+
+            .custom-rectangle {
+                max-width: 1180px;
+                margin: 0 auto;
+            }
+
+            footer {
+                justify-content: space-between;
+            }
+
+            .footer-column {
+                margin-right: 0;
+            }
+
+            .footer-connect {
+                margin-left: 0;
+            }
+        }
+        footer {
+            background-color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .footer-column {
+            flex: 1;
+            margin-left: 10px;
+            margin-right: 50px;
+        }
+        
+        .footer-column h2 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .footer-column a {
+            text-decoration: none;
+            color: #555;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .footer-connect {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .social-icons {
+            display: flex;
+            margin-top: 10px;
+        }
+        
+        .social-icon {
+            margin-right: 10px;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 20px;
+            color: #555;
+        }
+        
+    </style>  
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function () {
+            const navItems = document.querySelector('.nav-items');
+            document.querySelector('.nav-item').addEventListener('click', function () {
+                navItems.classList.toggle('active');
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            
+            <img src="images/thoughtworks-logo.svg" alt="Your Logo">
+        </div>
+        <div class="nav-items">
+            <a href="#" class="nav-item">What We Do</a>
+            <a href="#" class="nav-item">Who We Work With</a>
+            <a href="#" class="nav-item">Insights</a>
+            <a href="#" class="nav-item">Careers</a>
+            <a href="#" class="nav-item">About</a>
+            <a href="#" class="nav-item">Investors</a>
+            <a href="#" class="nav-item">Contact</a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+        </div>
+        <div class="flag">
+            
+            <img src="images/india-flag.png" alt="Indian Flag">
+            
+            <span>India |</span>
+            <span>English</span>
+        </div>
+    </nav>
+
+    <div class="carousel">
+        <div class="carousel-content">
+            <h1>Data Diagnostic</h1>
+            <p>Rate your current data<br>
+            experience and tips to<br>
+        modernize</p>
+            <a href="#" class="get-started-button">Get Started</a>
+        </div>
+    </div>
+
+    <div class="dot-container">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot middle"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+
+    <div class="additional-content">
+        <p>We’re a leading global technology consultancy that integrates strategy, design and<br>
+           software engineering to enable enterprises and technology disruptors to thrive. For<br>
+           over 30 years, we’ve been at the forefront of digital innovation and have vast<br>
+           experience creating adaptable technology platforms, designing world-class digital<br>
+           products and harnessing the power of data and AI to unlock new sources of value.
+        </p>
+    </div>
+
+    <div class="custom-rectangle">
+        <div class="rectangle-image">
+            <img src="images/hp_side_by_side_what_we_do.jpg" alt="Your Image">
+        </div>
+        <div class="rectangle-text">
+            <p>Strategy. Design. Engineering.</p>
+            <p>By combining all three disciplines together, you gain a competitive edge that helps propel your business to the next level. We’re laser-focused on transforming your digital journey so you can make extraordinary impact today, tomorrow and beyond.</p>
+            <a href="#" class="rectangle-button">What we do</a>
+        </div>
+    </div>
+
+    
+    <section class="full-width-section">
+        <div class="section-text">Transform your digital journey</div>
+        <a href="#" class="get-in-touch-button">Get in Touch</a>
+    </section>
+
+     <footer>
+        <div style="margin-left: 250px;" class="footer-column">
+            <h2>Company</h2>
+            <a href="#">About Us</a>
+            <a href="#">What We Do</a>
+            <a href="#">Partnerships</a>
+            <a href="#">Who We Work With</a>
+            <a href="#">News</a>
+            <a href="#">Diversity, Equality, and Inclusion</a>
+            <a href="#">Careers</a>
+            <a href="#">Investors</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <div style="margin-left: 100px;" class="footer-column">
+            <h2>Insights</h2>
+            <a href="#">Articles</a>
+            <a href="#">Blogs</a>
+            <a href="#">Books</a>
+            <a href="#">Podcasts</a>
+        </div>
+
+        <div style="margin-left: 30px;" class="footer-column">
+            <h2>Site Info</h2>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Accessibility Statement</a>
+            <a href="#">Modern Slavery Statement</a>
+            <a href="#">Code of Conduct</a>
+            <a href="#">Integrity Helpline</a>
+        </div>
+
+        
+    </footer>
+    <div class="footer-connect">
+        <h2>Connect with Us</h2>
+        <div class="social-icons">
+            <a href="#" class="social-icon"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="#" class="social-icon"><i class="fab fa-youtube"></i> YouTube</a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i> Instagram</a>
+        </div>
+    </div>
+    
+    <div class="copyright">
+        &copy; 2023 Thoughtworks, Inc.
+    </div>
+
+</body>
+</html>
