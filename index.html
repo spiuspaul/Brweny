@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thoughtworks: A leading technology consultancy | Thoughtworks</title>
-    <!-- <link rel="icon" type="image/x-icon" href="images/Thoughtworks.png"> -->
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"> 
     <style>
         body {
@@ -135,7 +132,7 @@
         }
         
         .get-started-button {
-            background-color: red;
+            background-color: rgb(247, 155, 30);
             color: white;
             padding: 10px 20px;
             text-decoration: none;
@@ -174,8 +171,6 @@
             line-height: 1.5;
         }
 
-        
-        
         .custom-rectangle {
             width: 1200px;
             max-width: 10000px;
@@ -213,7 +208,7 @@
         }
         
         .rectangle-button {
-            background-color: rgb(122, 70, 70);
+            background-color: rgb(247, 155, 30);
             color: white;
             padding: 10px 20px;
             text-decoration: none;
@@ -223,10 +218,62 @@
             margin-top: 10px;
         }
         
+        .grid-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            margin: 50px auto;
+            padding: 20px;
+            max-width: 1200px;
+            background-color: #f7f7f7;
+        }
+
+        .card {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border-radius: 4px;
+            width: 300px; /* or use max-width to control maximum stretch */
+            max-width: 100%; /* Ensures the card doesn't exceed the container's width */
+            height: 400px;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+          
+        .card h3 {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        .card p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .card button {
+            background-color: rgb(247, 155, 30);
+            color: white;
+            padding: 10px 20px;
+            border: none;   
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 95px;
+        }
+
+        .card button:hover {
+            background-color: rgb(168, 8, 8);
+        }
         
         .full-width-section {
             margin-top: 50px;
-            background-color: #001f3f; 
+            background-color: #1176ba; 
             color: white;
             text-align: center;
             padding: 50px 20px; 
@@ -245,7 +292,7 @@
         }
         
         .get-in-touch-button {
-            background-color: rgb(168, 8, 8);
+            background-color: rgb(247, 155, 30);
             color: white;
             padding: 15px 30px;
             text-decoration: none;
@@ -254,205 +301,180 @@
             margin-right: 90px;
         }
 
-        @media only screen and (min-width: 769px) {
-            .full-width-section {
-                padding: 50px 20px;
-            }
-
-            .custom-rectangle {
-                max-width: 1180px;
-                margin: 0 auto;
-            }
-
-            footer {
-                justify-content: space-between;
-            }
-
-            .footer-column {
-                margin-right: 0;
-            }
-
-            .footer-connect {
-                margin-left: 0;
-            }
-        }
         footer {
             background-color: white;
             padding: 20px;
             display: flex;
             justify-content: space-around;
+            height: 200px;
         }
-        
+
         .footer-column {
             flex: 1;
-            margin-left: 10px;
+            margin-left: 30px;
             margin-right: 50px;
         }
-        
+
         .footer-column h2 {
             font-size: 20px;
             font-weight: bold;
             margin-bottom: 10px;
         }
-        
+
         .footer-column a {
             text-decoration: none;
             color: #555;
             display: block;
             margin-bottom: 8px;
         }
-        
+
         .footer-connect {
             flex: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-        
+
         .social-icons {
             display: flex;
             margin-top: 10px;
         }
-        
+
         .social-icon {
             margin-right: 10px;
         }
-        
+
         .copyright {
             text-align: center;
             margin-top: 20px;
             color: #555;
         }
-        
+
     </style>  
     <script>
-        
         document.addEventListener('DOMContentLoaded', function () {
             const navItems = document.querySelector('.nav-items');
-            document.querySelector('.nav-item').addEventListener('click', function () {
+            const toggleButton = document.querySelector('.fa-bars');
+            toggleButton.addEventListener('click', function () {
                 navItems.classList.toggle('active');
             });
         });
     </script>
 </head>
 <body>
-
     <nav>
         <div class="logo">
-            
-            <img src="images/thoughtworks-logo.svg" alt="Your Logo">
+            <img src="images/logo.jpg" alt="Logo">
         </div>
         <div class="nav-items">
-            <a href="#" class="nav-item">What We Do</a>
-            <a href="#" class="nav-item">Who We Work With</a>
-            <a href="#" class="nav-item">Insights</a>
-            <a href="#" class="nav-item">Careers</a>
-            <a href="#" class="nav-item">About</a>
-            <a href="#" class="nav-item">Investors</a>
-            <a href="#" class="nav-item">Contact</a>
+            <a class="nav-item" href="#">What we do</a>
+            <a class="nav-item" href="#">Our work</a>
+            <a class="nav-item" href="#">Careers</a>
+            <a class="nav-item" href="#">Contact</a>
         </div>
         <div class="search-bar">
-            <input type="text" placeholder="Search">
-        </div>
-        <div class="flag">
-            
-            <img src="images/india-flag.png" alt="Indian Flag">
-            
-            <span>India |</span>
-            <span>English</span>
+            <i class="fas fa-search"></i>
+            <i class="fas fa-angle-down"></i>
+            </div>
         </div>
     </nav>
-
     <div class="carousel">
         <div class="carousel-content">
-            <h1>Data Diagnostic</h1>
-            <p>Rate your current data<br>
-            experience and tips to<br>
-        modernize</p>
+            <h1>Welcome to Brweny</h1>
+            <p>Innovating for the Future</p>
             <a href="#" class="get-started-button">Get Started</a>
         </div>
+        <div class="dot-container">
+            <div class="dot"></div>
+            <div class="dot middle"></div>
+            <div class="dot"></div>
+        </div>
     </div>
-
-    <div class="dot-container">
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot middle"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-    </div>
-
     <div class="additional-content">
-        <p>We’re a leading global technology consultancy that integrates strategy, design and<br>
-           software engineering to enable enterprises and technology disruptors to thrive. For<br>
-           over 30 years, we’ve been at the forefront of digital innovation and have vast<br>
-           experience creating adaptable technology platforms, designing world-class digital<br>
-           products and harnessing the power of data and AI to unlock new sources of value.
-        </p>
+        Discover how we work, our impact, and the innovative solutions we offer.
     </div>
-
     <div class="custom-rectangle">
         <div class="rectangle-image">
-            <img src="images/hp_side_by_side_what_we_do.jpg" alt="Your Image">
+            <img src="images/hp_side_by_side_what_we_do.jpg" alt="Impact Image">
         </div>
         <div class="rectangle-text">
-            <p>Strategy. Design. Engineering.</p>
-            <p>By combining all three disciplines together, you gain a competitive edge that helps propel your business to the next level. We’re laser-focused on transforming your digital journey so you can make extraordinary impact today, tomorrow and beyond.</p>
-            <a href="#" class="rectangle-button">What we do</a>
+            <p>Our Impact</p>
+            <p>Leading technological transformations that redefine industries and reshape the world.</p>
+            <a href="#" class="rectangle-button">Learn More</a>
         </div>
     </div>
-
     
-    <section class="full-width-section">
-        <div class="section-text">Transform your digital journey</div>
+    <!-- Begin Grid of Cards -->
+    <div class="grid-section">
+        <div class="card">
+            <img src="images/customer experience.png" alt="Card 1 Image">
+            <h3>Customer experience</h3>
+            <p>Crafting seamless, personalized digital interactions for customer satisfaction.</p>
+            <button>Read More</button>
+        </div>
+        <div class="card">
+            <img src="images/platforms.jpeg" alt="Card 2 Image">
+            <h3>Platforms</h3>
+            <p>Building scalable platforms for efficient digital transformation.</p>
+            <button>Read More</button>
+        </div>
+        <div class="card">
+            <img src="images/cloud.jpeg" alt="Card 3 Image">
+            <h3>Cloud</h3>
+            <p>Scalable cloud solutions for enhanced performance and security.</p>
+            <button>Read More</button>
+        </div>
+        <div class="card">
+            <img src="images/AI and ML.jpeg" alt="Card 4 Image">
+            <h3>AI and ML</h3>
+            <p>Automating processes and unlocking insights with AI and ML.</p>
+            <button>Read More</button>
+        </div>
+        <div class="card">
+            <img src="images/cloud2.jpeg" alt="Card 5 Image">
+            <h3>Cloud</h3>
+            <p>Optimizing cloud infrastructure to drive growth and compliance.</p>
+            <button>Read More</button>
+        </div>
+        <div class="card">
+            <img src="images/user_experience.jpeg" alt="Card 6 Image">
+            <h3>User experience</h3>
+            <p>Designing intuitive, engaging digital experiences for users.</p>
+            <button>Read More</button>
+        </div>
+    </div>
+    <!-- End Grid of Cards -->
+
+    <div class="full-width-section">
+        <div class="section-text">We are here to transform your business</div>
         <a href="#" class="get-in-touch-button">Get in Touch</a>
-    </section>
-
-     <footer>
-        <div style="margin-left: 250px;" class="footer-column">
-            <h2>Company</h2>
-            <a href="#">About Us</a>
-            <a href="#">What We Do</a>
-            <a href="#">Partnerships</a>
-            <a href="#">Who We Work With</a>
-            <a href="#">News</a>
-            <a href="#">Diversity, Equality, and Inclusion</a>
-            <a href="#">Careers</a>
-            <a href="#">Investors</a>
-            <a href="#">Contact Us</a>
-        </div>
-
-        <div style="margin-left: 100px;" class="footer-column">
-            <h2>Insights</h2>
-            <a href="#">Articles</a>
-            <a href="#">Blogs</a>
-            <a href="#">Books</a>
-            <a href="#">Podcasts</a>
-        </div>
-
-        <div style="margin-left: 30px;" class="footer-column">
-            <h2>Site Info</h2>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Accessibility Statement</a>
-            <a href="#">Modern Slavery Statement</a>
-            <a href="#">Code of Conduct</a>
-            <a href="#">Integrity Helpline</a>
-        </div>
-
-        
-    </footer>
-    <div class="footer-connect">
-        <h2>Connect with Us</h2>
-        <div class="social-icons">
-            <a href="#" class="social-icon"><i class="fab fa-facebook"></i> Facebook</a>
-            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            <a href="#" class="social-icon"><i class="fab fa-youtube"></i> YouTube</a>
-            <a href="#" class="social-icon"><i class="fab fa-instagram"></i> Instagram</a>
-        </div>
     </div>
     
-    <div class="copyright">
-        &copy; 2023 Thoughtworks, Inc.
-    </div>
+    <footer>
+        <div class="footer-column">
+            <h2>About Us</h2>
+            <a href="#">Who we are</a>
+            <a href="#">Our mission</a>
+            <a href="#">Our impact</a>
+        </div>
+        <div class="footer-column">
+            <h2>Services</h2>
+            <a href="#">Consulting</a>
+            <a href="#">Technology</a>
+            <a href="#">Innovation</a>
+        </div>
+        <div class="footer-connect">
+            <h2>Connect with Us</h2>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
 
+    <div class="copyright">
+        &copy; 2024 Brweny. All rights reserved.
+    </div>
 </body>
 </html>
